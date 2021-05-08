@@ -19,16 +19,17 @@ public class Q1316 {
 
                 for (int j = 0; j < alpa.length(); j++) { //알파벳 수만큼 반복
                     System.out.println("  alpa "+letter.charAt(x)+" and "+alpa.charAt(j)+" check");
+
                     if(letter_check[j] == true){
 
-                        if(x-1 == 0 || j >= 0) {
+                        if(x-1 == 0 && j >= 0) {
+
                             if(x-1 < 0) {
                                 x = 1;
                                 if (letter.charAt(x - 1) != alpa.charAt(j)) {
                                     System.out.println("letter " + letter.charAt(j - 1) + " is duplicated");
                                     result = result + 1;
                                     System.out.println("result: " + result);
-
                                 }
                             }
                             else{
@@ -68,6 +69,6 @@ public class Q1316 {
         }
         System.out.println(repeat);
         System.out.println(ans);
-        System .out.println(repeat - ans);
+        System.out.println(repeat - ans);
     }
 }
