@@ -8,7 +8,7 @@
 //N이 주어졌을 때, N의 사이클의 길이를 구하는 프로그램을 작성하시오.
 
 // 입력받는 함수, 각 자리를 나누고 더하는 함수, 10보다 작을 때 뒤에 0을 붙이는 함수(string형으로 변환) 이 전체를 while 로 반복 숫자 일치시 break
-// String 저장 int 형 변환후 저장
+// String 저장하는 변수, int 형 변환후 저장하는 변수, String 변수에 변화과정 저장, 정수 길이 저장하는 변수, 각 횟수 세는 변수
 import java.util.Scanner;
 
 public class Q1110 {
@@ -18,16 +18,22 @@ public class Q1110 {
         int first_num = Integer.parseInt(num_as_string); //첫 숫자 저장
         int num_size = num_as_string.length();
         int num_int; //편환하는 과정 저장
-        int num_result;
         int result;
         if (num_size == 1){ //뒤에 0붙이는 함수
-            num_int = Integer.parseInt(num_as_string + '0');
-        }
-        if(num_size > 1){ //각 자리를 더하는 함수
-            for (int i = 0; i < num_size; i++) {
-               num_int = num_int + Integer.parseInt(String.valueOf(num_as_string.charAt(i)));
-            }
+
         }
 
+
+    }
+    public static int each_plus(String num){
+        int result = 0;
+        for (int i = 0; i < num.length(); i++){
+            result = result + Integer.parseInt(String.valueOf(num.charAt(i))); //value of 로 String형 변환 후 int형으로 변환
+        }
+        return result;
+    }
+    public static void get_0(String num){
+        int result;
+        result = Integer.parseInt(num + '0');
     }
 }
