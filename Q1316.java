@@ -77,7 +77,7 @@ public class Q1316 {
         int result = 0;
         for (int i = 0; i < repeat; i++){
             String letter = sc.next(); //문자열 scan
-            if(alpacheck(letter)){
+            if(alpacheck(letter)){//check
                 result++;
             }
         }
