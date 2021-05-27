@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//mac os reinstall
 public class Q1000 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
