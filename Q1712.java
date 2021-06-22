@@ -20,6 +20,6 @@ public class Q1712 {
             Break_point = A/(C-B)+1;
         }
 
-        System.out.println(Break_point);
+        System.out.println(Break_point); //안녕
     }
 }
