@@ -27,7 +27,7 @@ public class Q9020 {
                     result = N - j;
                     System.out.println(N+" : "+result);
                     if(result < 0){
-                        break;
+                        continue;
                     }
                 }
                 for (int k = count.length; k <= 0; k--){
