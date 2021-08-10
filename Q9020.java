@@ -10,12 +10,12 @@ public class Q9020 {
 
         int result = 0;
 
-        for (int i = 2; i < 1000001/i; i++){// 범위지정
+        for (int i = 2; i < 1000001; i++){// 범위지정
             if (count[i] == true){
                 continue;
             }
             for (int j = i*i; j < 1000001; j+=i){
-                if(j%i == 0){
+                if(j % i == 0){
                     count[j] = true;
                 }
             }
@@ -24,22 +24,25 @@ public class Q9020 {
             int N = sc.nextInt();
             for (int j = 0; j < count.length; j++){
                 if(count[j] == false){
-                    result = N - j;
-                    System.out.println(N+" : "+result);
-                    if(result < 0){
-                        continue;
-                    }
-                }
-                for (int k = count.length; k <= 0; k--){
-                    System.out.println("k : "+ k);
-                    if(count[k] == false) {
-                        System.out.println(k);
-                        if (result == k) {
-                            System.out.println(result+""+ k);
-                            break;
+                    if (N > j) {
+                        result = N - j;
+                        System.out.println("N : " +N+" - "+j+" = "+ result);
+                        System.out.println(count.length);
+
+                        for (int k = count.length; k >= 0; k--){
+                            System.out.println("k : "+ k);
+
+                            if(count[k] == false) {
+                                System.out.println(k);
+
+                                if (result == k) {
+                                    System.out.print(result);
+                                    System.out.println(k);
+                                }
+                            }
+                            result = 0;
                         }
                     }
-                    result = 0;
                 }
             }
         }
