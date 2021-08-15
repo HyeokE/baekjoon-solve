@@ -20,31 +20,19 @@ public class Q9020 {
                 }
             }
         }
-        for (int i = 0; i < T; i++){
+        for (int i = 0; i < T; i++) {
             int N = sc.nextInt();
-            for (int j = 0; j < count.length; j++){
-                if(count[j] == false){
-                    if (N > j) {
-                        result = N - j;
-                        System.out.println("N : " +N+" - "+j+" = "+ result);
-                        System.out.println(count.length);
-
-                        for (int k = count.length; k >= 0; k--){
-                            System.out.println("k : "+ k);
-
-                            if(count[k] == false) {
-                                System.out.println(k);
-
-                                if (result == k) {
-                                    System.out.print(result);
-                                    System.out.println(k);
-                                }
-                            }
-                            result = 0;
-                        }
-                    }
+            int a = N / 2;
+            int b = N / 2;
+            while (true) {
+                if (count[a] == false && count[b] == false) {
+                    System.out.println(a + " " + b);
+                    break;
                 }
+                a--;
+                b++;
             }
+
         }
     }
 }
